@@ -11,6 +11,10 @@ table Orders
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Total Orders' = DISTINCTCOUNT(Orders[Order ID])
+		formatString: 0
+		lineageTag: f77f37b0-241d-4599-bef6-f03faee4b2bf
+
 	column 'Row ID'
 		dataType: int64
 		formatString: 0
